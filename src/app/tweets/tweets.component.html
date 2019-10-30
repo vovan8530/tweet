@@ -1,0 +1,11 @@
+<h3>Tweets</h3>
+  <div *ngIf="undefined === tweets">Loading...</div>
+  <div *ngIf="undefined !== tweets">
+    <div class ="card">
+      <ng-container *ngFor="let tweet of tweets">
+        <h4>{{tweet.name}}</h4>
+        <img src="{{tweet.img}}" style="max-width: 50px;">
+        <h6>{{tweet.text}}</h6>
+      </ng-container>
+    </div>
+  </div>
